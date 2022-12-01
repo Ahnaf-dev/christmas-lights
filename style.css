@@ -9,6 +9,18 @@ html {
   font-size: 62.5%;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 body {
   font-size: 1.8rem;
   line-height: 1.5;
@@ -80,20 +92,20 @@ main {
 }
 
 .active .lights__circle:nth-of-type(2n) {
-  animation: 2s linear 0s glow1;
+  animation: 2s linear glow1;
   background-color: #b60000;
 
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
 }
 .active .lights__circle:nth-of-type(2n + 1) {
-  animation: 2s linear 1s glow2;
+  animation: 2s linear glow2;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
   background-color: #0037fb;
 }
 .active .lights__circle:nth-of-type(3n + 1) {
-  animation: 2s linear 1.5s glow3;
+  animation: 2s linear glow3;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
   background-color: #df6500;
@@ -137,7 +149,7 @@ main {
   align-items: center;
   gap: 2px;
   position: absolute;
-  top: 30%;
+  top: 70%;
   left: 10%;
   border: 2px solid black;
   width: fit-content;
@@ -157,10 +169,10 @@ main {
 
 .toggle-lights {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%);
-  background-color: red;
+  background-color: rgb(158, 11, 11);
   width: 30rem;
   padding: 3rem;
   border: none;
@@ -173,6 +185,24 @@ main {
 
 .toggle-lights:hover {
   background-color: white;
-  color: red;
+  color: rgb(138, 26, 26);
   box-shadow: 0px 0px 15px 10px rgba(248, 4, 4, 0.699);
+}
+
+.change_speed {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: rgb(22, 50, 134);
+  color: white;
+  display: flex;
+  padding: 1rem;
+  gap: 20px;
+  border-radius: 20px;
+}
+.change_speed input {
+  font-size: 20px;
+  width: 5rem;
+  text-align: center;
 }
