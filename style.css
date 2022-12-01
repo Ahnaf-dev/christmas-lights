@@ -13,6 +13,7 @@ body {
   font-size: 1.8rem;
   line-height: 1.5;
   font-family: "Open Sans", sans-serif;
+  transition: background 0.5s ease-in;
 }
 
 img {
@@ -78,20 +79,6 @@ main {
   top: -20%;
 }
 
-/* .lights__circle:nth-of-type(2n) {
-  background-color: #b60000;
-  box-shadow: 0px 0px 15px 3px rgba(248, 4, 4, 0.699);
-}
-
-.lights__circle:nth-of-type(2n + 1) {
-  background-color: #0037fb;
-  box-shadow: 0px 0px 15px 3px #0037fb;
-}
-.lights__circle:nth-of-type(3n + 1) {
-  background-color: #df6500;
-  box-shadow: 0px 0px 15px 3px #df6500;
-} */
-
 .active .lights__circle:nth-of-type(2n) {
   animation: 2s linear 0s glow1;
   background-color: #b60000;
@@ -143,4 +130,27 @@ main {
   50% {
     box-shadow: 0px 0px 15px 10px #df6500;
   }
+}
+
+.toggle-night {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  border: 2px solid black;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.toggle-night:hover {
+  background-color: black;
+  color: white;
+}
+
+.dark {
+  background-color: black;
 }
