@@ -154,3 +154,25 @@ main {
 .dark {
   background-color: black;
 }
+
+.toggle-lights {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: red;
+  width: 30rem;
+  padding: 3rem;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.toggle-lights:hover {
+  background-color: white;
+  color: red;
+  box-shadow: 0px 0px 15px 10px rgba(248, 4, 4, 0.699);
+}
