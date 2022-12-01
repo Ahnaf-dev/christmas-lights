@@ -49,4 +49,25 @@ main {
 }
 
 .lights__circle::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -45%;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgb(63, 63, 68);
+}
+
+.lights__circle:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 60%;
+  width: 9rem;
+  height: 10px;
+
+  border-radius: 100%;
+  border-bottom: 1px solid rgb(63, 63, 68);
+  top: -20%;
 }
