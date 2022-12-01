@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
+}
+
+img {
+  width: 100%;
+  max-width: 70rem;
+  height: 100rem;
+}
+
+main {
+  max-width: 160rem;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.lights {
+  margin: 2rem;
+  position: relative;
+  width: 100%;
+  /* outline: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.lights__circle {
+  width: 5rem;
+  height: 5rem;
+  background-color: rgb(105, 45, 105);
+  border-radius: 50%;
+  position: relative;
+}
+
+.lights__circle::before {
+}
