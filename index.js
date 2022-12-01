@@ -3,10 +3,12 @@ const toggleLightsBtn = $(".toggle-lights");
 const lights = $(".lights");
 const body = $("body");
 const detectSpeed = $(".speed-control");
+const detectIntensity = $(".change__intensity input");
 
 toggleNightBtn.on("click", toggleDark);
 toggleLightsBtn.on("click", toggleLights);
 detectSpeed.on("change", changeSpeed);
+detectIntensity.on("change", changeIntensity);
 
 // toggle light functionality
 function toggleLights(normal = true) {
@@ -16,7 +18,7 @@ function toggleLights(normal = true) {
     toggleLightsBtn.text("Turn Off Lights");
 
     if (normal) {
-      addToAnimationDuration(0);
+      addToAnimationDuration(0.5);
     }
   } else {
     toggleLightsBtn.text("Turn On Lights");
@@ -26,20 +28,27 @@ function toggleLights(normal = true) {
 // control animation duration
 function addToAnimationDuration(seconds) {
   $(".lights__circle:nth-of-type(2n)").each(function (i, value) {
-    value.style.animationDuration = seconds ? seconds + "s" : 0;
+    value.style.animationDuration = 1 + seconds + "s";
   });
   $(".lights__circle:nth-of-type(2n + 1)").each(function (i, value) {
-    value.style.animationDuration = 1 + seconds + "s";
+    value.style.animationDuration = 1.5 + seconds + "s";
   });
 
   $(".lights__circle:nth-of-type(3n + 1)").each(function (i, value) {
-    value.style.animationDuration = 1.5 + seconds + "s";
+    value.style.animationDuration = 2 + seconds + "s";
   });
 }
 
 function changeSpeed() {
   const value = detectSpeed.val();
   addToAnimationDuration(Number(value));
+}
+
+// change intensity
+
+function changeIntensity() {
+  const value = Number(detectIntensity.val());
+  $(":root").css("--intensity", `${15 + value}px`);
 }
 
 // dark mode functionality

@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+:root {
+  --intensity: 15px;
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -118,7 +121,7 @@ main {
   }
 
   50% {
-    box-shadow: 0px 0px 15px 10px rgba(248, 4, 4, 0.699);
+    box-shadow: 0px 0px 15px var(--intensity) rgba(248, 4, 4, 0.699);
   }
 }
 
@@ -129,7 +132,7 @@ main {
   }
 
   50% {
-    box-shadow: 0px 0px 15px 10px #0037fb;
+    box-shadow: 0px 0px 15px var(--intensity) #0037fb;
   }
 }
 
@@ -140,7 +143,7 @@ main {
   }
 
   50% {
-    box-shadow: 0px 0px 15px 10px #df6500;
+    box-shadow: 0px 0px 15px var(--intensity) #df6500;
   }
 }
 
@@ -201,8 +204,22 @@ main {
   gap: 20px;
   border-radius: 20px;
 }
-.change_speed input {
+.change_speed input,
+.change__intensity input {
   font-size: 20px;
   width: 5rem;
   text-align: center;
+}
+
+.change__intensity {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: rgb(40, 116, 72);
+  color: white;
+  display: flex;
+  padding: 1rem;
+  gap: 20px;
+  border-radius: 20px;
 }
